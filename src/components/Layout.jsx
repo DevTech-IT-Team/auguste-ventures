@@ -8,14 +8,14 @@ export default function Layout() {
       minHeight: '100vh',
       display: 'flex',
       flexDirection: 'column',
-      background: 'linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%)',
+      background: '#0a0a0e', // darker, richer background
       color: '#fff',
-      fontFamily: '"Inter", sans-serif',
+      fontFamily: 'system-ui, "Segoe UI", Roboto, sans-serif',
       paddingTop: '80px', // For fixed navbar
     }}>
       <Navbar />
       
-      <main style={{ flex: 1, padding: '2rem 5%' }}>
+      <main style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
         <Outlet />
       </main>
 
