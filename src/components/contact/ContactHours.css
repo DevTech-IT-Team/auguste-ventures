@@ -1,0 +1,75 @@
+.contact-hours {
+  background: #f3f4f6;
+  padding-bottom: 2.4rem;
+}
+
+.hours-banner {
+  position: relative;
+  background: #e11d74;
+  color: #fff;
+  text-align: center;
+  padding: 0.7rem 1rem 1.05rem;
+}
+
+.contact-hours .hours-banner h2 {
+  margin: 0;
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.hours-banner::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+  width: 16px;
+  height: 16px;
+  background: #e11d74;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.hours-card {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 0.4rem;
+  max-width: 640px;
+  margin: 1.8rem auto 0;
+  padding: 1.35rem 1.1rem 1.2rem;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.hours-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.28rem;
+  color: #4a5568;
+  font-size: 0.72rem;
+  line-height: 1.3;
+}
+
+.hours-day strong {
+  color: #2d3748;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.hours-closed {
+  margin-top: 0.15rem;
+}
+
+@media (max-width: 700px) {
+  .hours-card {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem 0.5rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .hours-card {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

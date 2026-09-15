@@ -33,7 +33,10 @@ export default function Navbar() {
 
         <div className={`nav-links${open ? ' open' : ''}`}>
           {links.map((link) => {
-            const isActive = location.pathname === link.path;
+            const isActive =
+              link.path === '/'
+                ? location.pathname === '/'
+                : location.pathname === link.path || location.pathname.startsWith(`${link.path}/`);
             return (
               <Link
                 key={link.path}

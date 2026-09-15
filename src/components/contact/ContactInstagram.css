@@ -1,0 +1,134 @@
+.contact-instagram {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 2.4rem 1.5rem 2.8rem;
+}
+
+.ig-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem 1.4rem;
+  margin-bottom: 1.4rem;
+}
+
+.ig-avatar {
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+}
+
+.ig-identity {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.ig-identity strong {
+  color: #2d3748;
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+}
+
+.ig-identity span {
+  color: #6b7280;
+  font-size: 0.75rem;
+}
+
+.ig-stats {
+  display: flex;
+  gap: 1.1rem;
+  margin: 0;
+}
+
+.ig-stats div {
+  text-align: center;
+}
+
+.ig-stats dt {
+  margin: 0;
+  color: #e11d74;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.ig-stats dd {
+  margin: 0;
+  color: #6b7280;
+  font-size: 0.72rem;
+}
+
+.ig-follow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.32rem 0.85rem;
+  border-radius: 4px;
+  background: #e11d74;
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.ig-follow:hover {
+  background: #c91864;
+}
+
+.ig-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.ig-grid a {
+  display: block;
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: #fff;
+}
+
+.ig-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.ig-grid a.ig-brand-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  background: linear-gradient(135deg, #143a8c 0%, #1d4ed8 42%, #c81e4a 100%);
+  text-decoration: none;
+}
+
+.ig-grid a.ig-brand-tile img {
+  width: 42%;
+  height: auto;
+  max-height: 46%;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 50%;
+  padding: 0.35rem;
+}
+
+.ig-grid a.ig-brand-tile span {
+  color: #fff;
+  font-size: clamp(0.55rem, 1.6vw, 0.85rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-align: center;
+}
+
+@media (max-width: 560px) {
+  .ig-grid {
+    gap: 0.5rem;
+  }
+}

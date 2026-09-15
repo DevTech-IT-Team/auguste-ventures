@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, CalendarDays, ChevronLeft, ChevronRight } from 'lucide-react';
+import BookingModal from '../components/booking/BookingModal';
 import './Home.css';
 
 const CTA_SLIDES = [
@@ -24,6 +25,7 @@ const CTA_SLIDES = [
 
 export default function Home() {
   const [slide, setSlide] = useState(0);
+  const [isBookingOpen, setIsBookingOpen] = useState(false);
 
   useEffect(() => {
     document.title = 'Auguste Ventures | Trusted Business Consulting | Las Vegas';
@@ -92,13 +94,14 @@ export default function Home() {
             >
               <Mail size={22} />
             </a>
-            <Link
+            <button
+              type="button"
               className="hero-fab hero-fab-cal"
-              to="/contact-us"
               aria-label="Book a meeting"
+              onClick={() => setIsBookingOpen(true)}
             >
               <CalendarDays size={22} />
-            </Link>
+            </button>
           </div>
         </div>
       </section>
@@ -244,6 +247,8 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      <BookingModal isOpen={isBookingOpen} onClose={() => setIsBookingOpen(false)} />
     </div>
   );
 }
