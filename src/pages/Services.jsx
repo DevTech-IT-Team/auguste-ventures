@@ -1,10 +1,18 @@
+import { useEffect } from 'react';
+import ServicesHero from '../components/services/ServicesHero';
+import ServicesGrid from '../components/services/ServicesGrid';
+import ServicesContactForm from '../components/services/ServicesContactForm';
+
 export default function Services() {
+  useEffect(() => {
+    document.title = 'Services | Auguste Ventures';
+  }, []);
+
   return (
-    <div>
-      <h1 style={{ fontSize: '3rem', marginBottom: '1rem' }}>Services</h1>
-      <p style={{ color: '#cbd5e1', fontSize: '1.2rem' }}>
-        Explore our wide range of business consulting services.
-      </p>
+    <div className="services-page">
+      <ServicesHero />
+      <ServicesGrid />
+      <ServicesContactForm />
     </div>
   );
 }
